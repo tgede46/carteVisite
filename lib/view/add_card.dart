@@ -96,6 +96,7 @@ class _AddCardState extends State<AddCard> {
                 controller: companyCardController,
               ),
             ),
+
             Container(
               margin: EdgeInsets.only(bottom: 10),
               child: TextFormField(
