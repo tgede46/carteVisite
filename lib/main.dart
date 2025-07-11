@@ -1,5 +1,7 @@
+import 'package:cartevisite/view/add_card.dart';
 import 'package:cartevisite/view/home.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/scheduler.dart';
 
 void main() {
   runApp(const MyApp());
@@ -23,18 +25,24 @@ class _MyAppState extends State<MyApp> {
 
   @override
   Widget build(BuildContext context) {
+
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       home: Scaffold(
         appBar: AppBar(
-          title: Text('carte de visite'),
+          title: [
+            Text("Home"),
+            Text('Ajout card')
+          ][_currentIndex],
         ),
         body: [
           Home(),
-          Card(),
+          AddCard(),
         ][_currentIndex],
         bottomNavigationBar: BottomNavigationBar(
           currentIndex: _currentIndex,
           onTap: (index)=> setCurrentIndex(index),
+          type: BottomNavigationBarType.fixed,
           selectedItemColor: Colors.blue,
           unselectedItemColor:  Colors.grey,
           elevation: 10,
