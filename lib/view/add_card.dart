@@ -140,7 +140,7 @@ class _AddCardState extends State<AddCard> {
               child: TextFormField(
                 decoration: InputDecoration(
                   labelText: "Website",
-                  hintText: "WWW.example.com",
+                  hintText: "www.example.com",
                   border: OutlineInputBorder(
                     borderRadius: BorderRadius.circular(25),
                   ),
